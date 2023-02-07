@@ -8,7 +8,8 @@
 import Foundation
 
 protocol NetworkClient {
-    func perform<T: Decodable>(_ request: URLRequest) async throws -> T }
+    func perform<T: Decodable>(_ request: URLRequest) async throws -> T
+}
 
 class MyNetworkClient: NetworkClient {
     func perform<T: Decodable>(_ request: URLRequest) async throws -> T {
