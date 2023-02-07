@@ -7,14 +7,19 @@
 
 import SwiftUI
 
+//let persistenceController = PersistenceController.shared
+
 @main
 struct CommentsSearchApp: App {
-    let persistenceController = PersistenceController.shared
+    
+    private var comments = MyCommentsRepository(commentsApi: MyApi(networkClient: MyNetworkClient(), router: MyRouter()))
 
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                 .environmentObject(comments)
+//                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
