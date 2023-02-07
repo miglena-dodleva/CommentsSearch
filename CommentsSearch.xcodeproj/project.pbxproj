@@ -16,6 +16,14 @@
 		4C59AB09299154E800CC650D /* CommentsSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AB08299154E800CC650D /* CommentsSearchTests.swift */; };
 		4C59AB13299154E800CC650D /* CommentsSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AB12299154E800CC650D /* CommentsSearchUITests.swift */; };
 		4C59AB15299154E800CC650D /* CommentsSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AB14299154E800CC650D /* CommentsSearchUITestsLaunchTests.swift */; };
+		4C765187299248DA00568D3C /* CommentsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765186299248DA00568D3C /* CommentsDto.swift */; };
+		4C76518D29924A6A00568D3C /* Comments.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C76518B29924A6A00568D3C /* Comments.xcdatamodeld */; };
+		4C76519029924B7000568D3C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76518F29924B7000568D3C /* Router.swift */; };
+		4C76519229924B7E00568D3C /* MyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519129924B7E00568D3C /* MyRouter.swift */; };
+		4C76519629924BC800568D3C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519529924BC800568D3C /* NetworkClient.swift */; };
+		4C76519829924BDC00568D3C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519729924BDC00568D3C /* Api.swift */; };
+		4C76519A29924BE700568D3C /* MyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519929924BE700568D3C /* MyApi.swift */; };
+		4C76519C29924E0700568D3C /* Responce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519B29924E0700568D3C /* Responce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		4C59AB0E299154E800CC650D /* CommentsSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentsSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C59AB12299154E800CC650D /* CommentsSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSearchUITests.swift; sourceTree = "<group>"; };
 		4C59AB14299154E800CC650D /* CommentsSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C765186299248DA00568D3C /* CommentsDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDto.swift; sourceTree = "<group>"; };
+		4C76518C29924A6A00568D3C /* Comments.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Comments.xcdatamodel; sourceTree = "<group>"; };
+		4C76518F29924B7000568D3C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4C76519129924B7E00568D3C /* MyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRouter.swift; sourceTree = "<group>"; };
+		4C76519529924BC800568D3C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		4C76519729924BDC00568D3C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		4C76519929924BE700568D3C /* MyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApi.swift; sourceTree = "<group>"; };
+		4C76519B29924E0700568D3C /* Responce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +95,10 @@
 		4C59AAE5299154E500CC650D = {
 			isa = PBXGroup;
 			children = (
+				4C765184299245C900568D3C /* Views */,
+				4C765185299245CC00568D3C /* Models */,
+				4C765183299245A200568D3C /* Api */,
+				4C7651822992459D00568D3C /* Service */,
 				4C59AAF0299154E500CC650D /* CommentsSearch */,
 				4C59AB07299154E800CC650D /* CommentsSearchTests */,
 				4C59AB11299154E800CC650D /* CommentsSearchUITests */,
@@ -133,6 +153,42 @@
 				4C59AB14299154E800CC650D /* CommentsSearchUITestsLaunchTests.swift */,
 			);
 			path = CommentsSearchUITests;
+			sourceTree = "<group>";
+		};
+		4C7651822992459D00568D3C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4C765183299245A200568D3C /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				4C76518F29924B7000568D3C /* Router.swift */,
+				4C76519129924B7E00568D3C /* MyRouter.swift */,
+				4C76519529924BC800568D3C /* NetworkClient.swift */,
+				4C76519729924BDC00568D3C /* Api.swift */,
+				4C76519929924BE700568D3C /* MyApi.swift */,
+				4C76519B29924E0700568D3C /* Responce.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		4C765184299245C900568D3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C765185299245CC00568D3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C765186299248DA00568D3C /* CommentsDto.swift */,
+				4C76518B29924A6A00568D3C /* Comments.xcdatamodeld */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +321,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C76519229924B7E00568D3C /* MyRouter.swift in Sources */,
 				4C59AAF7299154E500CC650D /* CommentsSearch.xcdatamodeld in Sources */,
 				4C59AAF2299154E500CC650D /* CommentsSearchApp.swift in Sources */,
 				4C59AAF9299154E500CC650D /* ContentView.swift in Sources */,
+				4C76519029924B7000568D3C /* Router.swift in Sources */,
+				4C76519A29924BE700568D3C /* MyApi.swift in Sources */,
+				4C76519629924BC800568D3C /* NetworkClient.swift in Sources */,
+				4C76518D29924A6A00568D3C /* Comments.xcdatamodeld in Sources */,
+				4C76519C29924E0700568D3C /* Responce.swift in Sources */,
+				4C765187299248DA00568D3C /* CommentsDto.swift in Sources */,
+				4C76519829924BDC00568D3C /* Api.swift in Sources */,
 				4C59AAF4299154E500CC650D /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +685,16 @@
 			);
 			currentVersion = 4C59AAF6299154E500CC650D /* CommentsSearch.xcdatamodel */;
 			path = CommentsSearch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		4C76518B29924A6A00568D3C /* Comments.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C76518C29924A6A00568D3C /* Comments.xcdatamodel */,
+			);
+			currentVersion = 4C76518C29924A6A00568D3C /* Comments.xcdatamodel */;
+			path = Comments.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
