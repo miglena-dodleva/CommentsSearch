@@ -44,4 +44,3 @@ class MyApi: Api {
     }
     
 }
-

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 protocol CommentsRepository {
 
@@ -32,3 +33,17 @@ class MyCommentsRepository: CommentsRepository, ObservableObject {
     
 }
 
+//func getComments() async throws -> [Comments] {
+//    return try await
+//}
+//
+//func getAll() -> [Comments] {
+//
+//    var items: [CommentsDto] = []
+//    for item in items {
+//
+//      let request = NSFetchRequest<Comments>(NSFetchRequest<NSFetchRequestResult>(entityName: Comments.entity()))
+//
+//        return request
+//    }
+//}
