@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4C59AAF2299154E500CC650D /* CommentsSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AAF1299154E500CC650D /* CommentsSearchApp.swift */; };
 		4C59AAF4299154E500CC650D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AAF3299154E500CC650D /* Persistence.swift */; };
-		4C59AAF7299154E500CC650D /* CommentsSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AAF5299154E500CC650D /* CommentsSearch.xcdatamodeld */; };
 		4C59AAF9299154E500CC650D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AAF8299154E500CC650D /* RootView.swift */; };
 		4C59AAFB299154E700CC650D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C59AAFA299154E700CC650D /* Assets.xcassets */; };
 		4C59AAFF299154E700CC650D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C59AAFE299154E700CC650D /* Preview Assets.xcassets */; };
@@ -50,7 +49,6 @@
 		4C59AAEE299154E500CC650D /* CommentsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentsSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C59AAF1299154E500CC650D /* CommentsSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSearchApp.swift; sourceTree = "<group>"; };
 		4C59AAF3299154E500CC650D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4C59AAF6299154E500CC650D /* CommentsSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommentsSearch.xcdatamodel; sourceTree = "<group>"; };
 		4C59AAF8299154E500CC650D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		4C59AAFA299154E700CC650D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C59AAFC299154E700CC650D /* CommentsSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommentsSearch.entitlements; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				4C59AAF8299154E500CC650D /* RootView.swift */,
 				4C59AAFA299154E700CC650D /* Assets.xcassets */,
 				4C59AAFC299154E700CC650D /* CommentsSearch.entitlements */,
-				4C59AAF5299154E500CC650D /* CommentsSearch.xcdatamodeld */,
 				4C59AAFD299154E700CC650D /* Preview Content */,
 			);
 			path = CommentsSearch;
@@ -323,7 +320,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C76519229924B7E00568D3C /* MyRouter.swift in Sources */,
-				4C59AAF7299154E500CC650D /* CommentsSearch.xcdatamodeld in Sources */,
 				4CD868342993AC8D008B1E54 /* AplicationState.swift in Sources */,
 				4C59AAF2299154E500CC650D /* CommentsSearchApp.swift in Sources */,
 				4CA8F94E29939095008601B3 /* CommentView.swift in Sources */,
@@ -682,16 +678,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4C59AAF5299154E500CC650D /* CommentsSearch.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4C59AAF6299154E500CC650D /* CommentsSearch.xcdatamodel */,
-			);
-			currentVersion = 4C59AAF6299154E500CC650D /* CommentsSearch.xcdatamodel */;
-			path = CommentsSearch.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		4C76518B29924A6A00568D3C /* Comments.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
