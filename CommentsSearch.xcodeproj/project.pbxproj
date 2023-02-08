@@ -10,7 +10,7 @@
 		4C59AAF2299154E500CC650D /* CommentsSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AAF1299154E500CC650D /* CommentsSearchApp.swift */; };
 		4C59AAF4299154E500CC650D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AAF3299154E500CC650D /* Persistence.swift */; };
 		4C59AAF7299154E500CC650D /* CommentsSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AAF5299154E500CC650D /* CommentsSearch.xcdatamodeld */; };
-		4C59AAF9299154E500CC650D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AAF8299154E500CC650D /* ContentView.swift */; };
+		4C59AAF9299154E500CC650D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AAF8299154E500CC650D /* RootView.swift */; };
 		4C59AAFB299154E700CC650D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C59AAFA299154E700CC650D /* Assets.xcassets */; };
 		4C59AAFF299154E700CC650D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C59AAFE299154E700CC650D /* Preview Assets.xcassets */; };
 		4C59AB09299154E800CC650D /* CommentsSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AB08299154E800CC650D /* CommentsSearchTests.swift */; };
@@ -23,6 +23,10 @@
 		4C76519629924BC800568D3C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519529924BC800568D3C /* NetworkClient.swift */; };
 		4C76519829924BDC00568D3C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519729924BDC00568D3C /* Api.swift */; };
 		4C76519E2992696B00568D3C /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519D2992696B00568D3C /* CommentsRepository.swift */; };
+		4CA8F94A29939077008601B3 /* Page1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8F94929939077008601B3 /* Page1View.swift */; };
+		4CA8F94C29939086008601B3 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8F94B29939086008601B3 /* SearchView.swift */; };
+		4CA8F94E29939095008601B3 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8F94D29939095008601B3 /* CommentView.swift */; };
+		4CD868342993AC8D008B1E54 /* AplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD868332993AC8D008B1E54 /* AplicationState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +51,7 @@
 		4C59AAF1299154E500CC650D /* CommentsSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSearchApp.swift; sourceTree = "<group>"; };
 		4C59AAF3299154E500CC650D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4C59AAF6299154E500CC650D /* CommentsSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommentsSearch.xcdatamodel; sourceTree = "<group>"; };
-		4C59AAF8299154E500CC650D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C59AAF8299154E500CC650D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		4C59AAFA299154E700CC650D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C59AAFC299154E700CC650D /* CommentsSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommentsSearch.entitlements; sourceTree = "<group>"; };
 		4C59AAFE299154E700CC650D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -63,6 +67,10 @@
 		4C76519529924BC800568D3C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		4C76519729924BDC00568D3C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		4C76519D2992696B00568D3C /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
+		4CA8F94929939077008601B3 /* Page1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1View.swift; sourceTree = "<group>"; };
+		4CA8F94B29939086008601B3 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		4CA8F94D29939095008601B3 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		4CD868332993AC8D008B1E54 /* AplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AplicationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +101,10 @@
 		4C59AAE5299154E500CC650D = {
 			isa = PBXGroup;
 			children = (
-				4C765184299245C900568D3C /* Views */,
+				4CD868332993AC8D008B1E54 /* AplicationState.swift */,
+				4CA8F94829939049008601B3 /* UIView */,
 				4C765185299245CC00568D3C /* Models */,
 				4C765183299245A200568D3C /* Api */,
-				4C7651822992459D00568D3C /* Service */,
 				4C59AAF0299154E500CC650D /* CommentsSearch */,
 				4C59AB07299154E800CC650D /* CommentsSearchTests */,
 				4C59AB11299154E800CC650D /* CommentsSearchUITests */,
@@ -119,7 +127,7 @@
 			children = (
 				4C59AAF1299154E500CC650D /* CommentsSearchApp.swift */,
 				4C59AAF3299154E500CC650D /* Persistence.swift */,
-				4C59AAF8299154E500CC650D /* ContentView.swift */,
+				4C59AAF8299154E500CC650D /* RootView.swift */,
 				4C59AAFA299154E700CC650D /* Assets.xcassets */,
 				4C59AAFC299154E700CC650D /* CommentsSearch.entitlements */,
 				4C59AAF5299154E500CC650D /* CommentsSearch.xcdatamodeld */,
@@ -153,13 +161,6 @@
 			path = CommentsSearchUITests;
 			sourceTree = "<group>";
 		};
-		4C7651822992459D00568D3C /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		4C765183299245A200568D3C /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,13 +173,6 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
-		4C765184299245C900568D3C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		4C765185299245CC00568D3C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +180,16 @@
 				4C76518B29924A6A00568D3C /* Comments.xcdatamodeld */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4CA8F94829939049008601B3 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				4CA8F94929939077008601B3 /* Page1View.swift */,
+				4CA8F94B29939086008601B3 /* SearchView.swift */,
+				4CA8F94D29939095008601B3 /* CommentView.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,12 +324,16 @@
 			files = (
 				4C76519229924B7E00568D3C /* MyRouter.swift in Sources */,
 				4C59AAF7299154E500CC650D /* CommentsSearch.xcdatamodeld in Sources */,
+				4CD868342993AC8D008B1E54 /* AplicationState.swift in Sources */,
 				4C59AAF2299154E500CC650D /* CommentsSearchApp.swift in Sources */,
-				4C59AAF9299154E500CC650D /* ContentView.swift in Sources */,
+				4CA8F94E29939095008601B3 /* CommentView.swift in Sources */,
+				4C59AAF9299154E500CC650D /* RootView.swift in Sources */,
+				4CA8F94A29939077008601B3 /* Page1View.swift in Sources */,
 				4C76519029924B7000568D3C /* Router.swift in Sources */,
 				4C76519629924BC800568D3C /* NetworkClient.swift in Sources */,
 				4C76518D29924A6A00568D3C /* Comments.xcdatamodeld in Sources */,
 				4C765187299248DA00568D3C /* CommentsDto.swift in Sources */,
+				4CA8F94C29939086008601B3 /* SearchView.swift in Sources */,
 				4C76519829924BDC00568D3C /* Api.swift in Sources */,
 				4C59AAF4299154E500CC650D /* Persistence.swift in Sources */,
 				4C76519E2992696B00568D3C /* CommentsRepository.swift in Sources */,
