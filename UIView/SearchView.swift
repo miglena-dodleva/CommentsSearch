@@ -3,9 +3,9 @@
 //  CommentsSearch
 //
 //  Created by Jessica on 8.02.23.
-//
 
 import SwiftUI
+import CoreData
 
 struct SearchView: View {
     
@@ -14,10 +14,8 @@ struct SearchView: View {
     @State private var isLoading: Bool = false
     
     @EnvironmentObject var commentsRepo: MyCommentsRepository
-    @Environment(\.managedObjectContext) var context
     
     @FetchRequest(entity: Comments.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Comments.id, ascending: true)]) var resultsDB: FetchedResults<Comments>
-    
     
     var body: some View {
         NavigationStack{
@@ -29,14 +27,13 @@ struct SearchView: View {
             }
             else {
                 List{
-                    ForEach(0..<resultsDB.count) { comment in
-                        CommentView()
+                    ForEach(resultsDB) { comment in
+                        CommentView(comment: comment)
                             }
                         }
                 }
         }.navigationTitle("Comments Search")
             .searchable(text: $query)
-        
     }
 }
 

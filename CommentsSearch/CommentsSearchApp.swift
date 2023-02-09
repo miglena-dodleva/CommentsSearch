@@ -11,7 +11,7 @@ import SwiftUI
 struct CommentsSearchApp: App {
     let persistenceController = PersistenceController.shared
 
-    private var commentsService = MyCommentsRepository(commentsApi: MyApi(networkClient: MyNetworkClient(), router: MyRouter()))
+    var commentsService = MyCommentsRepository(commentsApi: MyApi(networkClient: MyNetworkClient(), router: MyRouter()), controller: PersistenceController.shared)
     
     var body: some Scene {
         WindowGroup {

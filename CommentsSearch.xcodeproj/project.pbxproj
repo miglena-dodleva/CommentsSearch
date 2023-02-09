@@ -16,7 +16,7 @@
 		4C59AB13299154E800CC650D /* CommentsSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AB12299154E800CC650D /* CommentsSearchUITests.swift */; };
 		4C59AB15299154E800CC650D /* CommentsSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AB14299154E800CC650D /* CommentsSearchUITestsLaunchTests.swift */; };
 		4C765187299248DA00568D3C /* CommentsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765186299248DA00568D3C /* CommentsDto.swift */; };
-		4C76518D29924A6A00568D3C /* Comments.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C76518B29924A6A00568D3C /* Comments.xcdatamodeld */; };
+		4C76518D29924A6A00568D3C /* DB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C76518B29924A6A00568D3C /* DB.xcdatamodeld */; };
 		4C76519029924B7000568D3C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76518F29924B7000568D3C /* Router.swift */; };
 		4C76519229924B7E00568D3C /* MyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519129924B7E00568D3C /* MyRouter.swift */; };
 		4C76519629924BC800568D3C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76519529924BC800568D3C /* NetworkClient.swift */; };
@@ -25,6 +25,7 @@
 		4CA8F94A29939077008601B3 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8F94929939077008601B3 /* SplashScreenView.swift */; };
 		4CA8F94C29939086008601B3 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8F94B29939086008601B3 /* SearchView.swift */; };
 		4CA8F94E29939095008601B3 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8F94D29939095008601B3 /* CommentView.swift */; };
+		4CBF69CE29952B21002E2A89 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF69CD29952B21002E2A89 /* Mocks.swift */; };
 		4CD868342993AC8D008B1E54 /* AplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD868332993AC8D008B1E54 /* AplicationState.swift */; };
 		4CD868392993BB40008B1E54 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD868382993BB40008B1E54 /* Comments.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		4CA8F94929939077008601B3 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		4CA8F94B29939086008601B3 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		4CA8F94D29939095008601B3 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		4CBF69CD29952B21002E2A89 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		4CD868332993AC8D008B1E54 /* AplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AplicationState.swift; sourceTree = "<group>"; };
 		4CD868382993BB40008B1E54 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				4C59AB08299154E800CC650D /* CommentsSearchTests.swift */,
+				4CBF69CD29952B21002E2A89 /* Mocks.swift */,
 			);
 			path = CommentsSearchTests;
 			sourceTree = "<group>";
@@ -177,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				4C765186299248DA00568D3C /* CommentsDto.swift */,
-				4C76518B29924A6A00568D3C /* Comments.xcdatamodeld */,
+				4C76518B29924A6A00568D3C /* DB.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,7 +341,7 @@
 				4CA8F94A29939077008601B3 /* SplashScreenView.swift in Sources */,
 				4C76519029924B7000568D3C /* Router.swift in Sources */,
 				4C76519629924BC800568D3C /* NetworkClient.swift in Sources */,
-				4C76518D29924A6A00568D3C /* Comments.xcdatamodeld in Sources */,
+				4C76518D29924A6A00568D3C /* DB.xcdatamodeld in Sources */,
 				4C765187299248DA00568D3C /* CommentsDto.swift in Sources */,
 				4CA8F94C29939086008601B3 /* SearchView.swift in Sources */,
 				4C76519829924BDC00568D3C /* Api.swift in Sources */,
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C59AB09299154E800CC650D /* CommentsSearchTests.swift in Sources */,
+				4CBF69CE29952B21002E2A89 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,13 +694,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4C76518B29924A6A00568D3C /* Comments.xcdatamodeld */ = {
+		4C76518B29924A6A00568D3C /* DB.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				4C76518C29924A6A00568D3C /* Comments.xcdatamodel */,
 			);
 			currentVersion = 4C76518C29924A6A00568D3C /* Comments.xcdatamodel */;
-			path = Comments.xcdatamodeld;
+			path = DB.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -28,6 +28,4 @@ extension Comments: Identifiable {
         self.comment_body = dto.comment_body
         
     }
-    
-    
 }

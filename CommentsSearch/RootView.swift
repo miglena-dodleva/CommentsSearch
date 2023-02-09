@@ -11,15 +11,9 @@ import CoreData
 struct RootView: View {
     
     @EnvironmentObject var commentsService: MyCommentsRepository
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.managedObjectContext) var viewContext
     
     @ObservedObject var applicationState: AplicationState = AplicationState()
-    
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \Comments.timestamp, ascending: true)],
-//            animation: .default)
-       
-    private var comments: FetchedResults<Comments>
 
 
     var body: some View {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CommentView: View {
     
-    private let comment: Comments
+    let comment: Comments
     
     var body: some View {
         VStack(alignment: .leading, spacing: 2.0)
@@ -41,12 +41,10 @@ struct CommentView: View {
         }.padding(.horizontal, 20)
         
         }
-        
-    
 }
 
 struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentView()
+        CommentView(comment: Comments())
     }
 }
