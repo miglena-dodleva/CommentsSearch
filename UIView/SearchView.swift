@@ -10,17 +10,32 @@ import SwiftUI
 struct SearchView: View {
     
     @State private var query = ""
+    @State private var results: [Comments] = []
+    @State private var isLoading: Bool = false
+    
+    @EnvironmentObject var commentsRepo: MyCommentsRepository
+    @Environment(\.managedObjectContext) var context
+    
+    @FetchRequest(entity: Comments.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Comments.id, ascending: true)]) var resultsDB: FetchedResults<Comments>
+    
     
     var body: some View {
         NavigationStack{
-            List{
-                ForEach(0..<5){_ in
-                    CommentView()
+            
+            if resultsDB.isEmpty {
+                if !isLoading {
+                    Text("Has no results to show")
                 }
             }
-            .navigationTitle("Comments Search")
+            else {
+                List{
+                    ForEach(0..<resultsDB.count) { comment in
+                        CommentView()
+                            }
+                        }
+                }
+        }.navigationTitle("Comments Search")
             .searchable(text: $query)
-        }
         
     }
 }

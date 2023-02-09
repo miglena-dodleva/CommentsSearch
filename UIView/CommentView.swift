@@ -8,31 +8,32 @@
 import SwiftUI
 
 struct CommentView: View {
+    
+    private let comment: Comments
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 2.0)
         {
             HStack{
                 
-                Text("id=")
+                Text("id= \(comment.id)")
                 
                 Spacer()
                
-                Text("PostId=")
+                Text("PostId= \(comment.post_id)")
                     .padding(.horizontal, 30)
                     .font(.headline)
     
             }
             VStack(alignment: .leading){
-                Text("name")
+                Text("name: \(comment.name)")
             }
             VStack(alignment: .leading){
-                Text("email")
+                Text("email: \(comment.email)")
             }
             VStack(alignment: .leading){
-                Text("message")
+                Text("message: \(comment.comment_body)")
                     .multilineTextAlignment(.leading)
-                    
-                
             }
             .background(.blue)
             .foregroundColor(.white)
