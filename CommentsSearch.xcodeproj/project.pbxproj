@@ -171,7 +171,6 @@
 				4C76519129924B7E00568D3C /* MyRouter.swift */,
 				4C76519529924BC800568D3C /* NetworkClient.swift */,
 				4C76519729924BDC00568D3C /* Api.swift */,
-				4C76519D2992696B00568D3C /* CommentsRepository.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -199,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				4CD868382993BB40008B1E54 /* Comments.swift */,
+				4C76519D2992696B00568D3C /* CommentsRepository.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
