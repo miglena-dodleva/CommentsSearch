@@ -33,7 +33,7 @@ struct SearchView: View {
                         }
                 }
         }.navigationTitle("Comments Search")
-            .searchable(text: $query)
+        .searchable(text: $query)
     }
 }
 

@@ -12,35 +12,32 @@ struct CommentView: View {
     let comment: Comments
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 2.0)
-        {
-            HStack{
+        NavigationLink(destination: DetailView(comment: comment)){
+            VStack(alignment: .leading, spacing: 3.0)
+            {
+                HStack{
+                    
+                    Text("Id= \(comment.id)")
+                    
+                    Spacer()
+                    
+                    Text("PostId= \(comment.post_id)")
+                        .padding(.horizontal, 30)
+                        .font(.headline)
+                    
+                }
+                VStack(alignment: .leading){
+                    Text("Name: \(comment.name)")
+                }
+                VStack(alignment: .leading){
+                    Text("Email: \(comment.email)")
+                }
                 
-                Text("id= \(comment.id)")
                 
-                Spacer()
-               
-                Text("PostId= \(comment.post_id)")
-                    .padding(.horizontal, 30)
-                    .font(.headline)
-    
-            }
-            VStack(alignment: .leading){
-                Text("name: \(comment.name)")
-            }
-            VStack(alignment: .leading){
-                Text("email: \(comment.email)")
-            }
-            VStack(alignment: .leading){
-                Text("message: \(comment.comment_body)")
-                    .multilineTextAlignment(.leading)
-            }
-            .background(.blue)
-            .foregroundColor(.white)
+            }.padding(.horizontal, 30)
             
-        }.padding(.horizontal, 20)
-        
         }
+    }
 }
 
 struct CommentView_Previews: PreviewProvider {
