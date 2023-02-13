@@ -67,6 +67,7 @@ struct SearchView: View {
             
             isLoading = true
             Task{
+              
                 let b = try? await commentsRepo.searchComments(query: query)
                 results = b ?? []
                 
