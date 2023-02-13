@@ -15,25 +15,66 @@ struct SearchView: View {
     
     @EnvironmentObject var commentsRepo: MyCommentsRepository
     
-    @FetchRequest(entity: Comments.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Comments.id, ascending: true)]) var resultsDB: FetchedResults<Comments>
+//    @FetchRequest(entity: Comments.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Comments.id, ascending: true)]) var resultsDB: FetchedResults<Comments>
     
     var body: some View {
+        
         NavigationStack{
             
-            if resultsDB.isEmpty {
+            if results.isEmpty {
                 if !isLoading {
                     Text("Has no results to show")
                 }
             }
             else {
                 List{
-                    ForEach(resultsDB) { comment in
-                        CommentView(comment: comment)
-                            }
-                        }
+                    ForEach(0..<results.count) {index in
+                            CommentView(comment: self.results[index])
+                           
+                    }
                 }
-        }.navigationTitle("Comments Search")
-        .searchable(text: $query)
+
+            }
+            if isLoading{
+                ZStack{
+                    Color(.white)
+                        .opacity(0.3)
+                        .ignoresSafeArea()
+                    ProgressView("Fetching Comments")
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 10)
+                            .fill(Color(.systemBackground))
+                        )
+                        .frame(alignment: .center)
+                        .shadow(radius: 10)
+                }
+            }
+            
+        }.onAppear {
+            isLoading = true
+            
+            // get all from db
+            Task {
+                let a = try? await commentsRepo.getAllCommentsFromDB()
+                results = a ?? []
+                
+                isLoading = false
+            }
+            
+        }
+        .navigationTitle("Comments Search")
+        .searchable(text: $query )
+        .onSubmit(of: .search){
+            
+            isLoading = true
+            Task{
+                results = []
+                let b = try? await commentsRepo.searchComments(query: query)
+                results = b ?? []
+                
+                isLoading = false
+            }
+        }
     }
 }
 
