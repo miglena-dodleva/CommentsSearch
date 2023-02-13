@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import CommentsSearch
 
 final class CommentsSearchTests: XCTestCase {
 

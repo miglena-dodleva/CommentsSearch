@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@testable import CommentsSearch
 
 
 @testable import CommentsSearch
@@ -15,7 +16,7 @@ class MockRouter: Router {
     lazy var base = Bundle(url: Bundle(for: type(of: self)).url(forResource: "Mocks", withExtension: "bundle")!)!.bundleURL
     
     var searchEndpoint: URL {
-        base.appending(path: "commmentsrepos")
+        base.appending(path: "commentsrepos")
     }
 }
 

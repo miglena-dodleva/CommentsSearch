@@ -15,9 +15,10 @@ final class ApiTests: XCTestCase {
         
         func testSearchRepos() async {
             
-            let response = try! await comments.searchCommentsFromApi(query: "2")
+            let response = try! await comments.searchCommentsFromApi(query: "1")
 
-            XCTAssertEqual(response.count, 5)
+            XCTAssertEqual(response.count, 21)
+            
                            
 //            let response = try! await comments.searchComments(query: "1")
 //            XCTAssertEqual(response., <#T##expression2: Equatable##Equatable#>)
