@@ -15,7 +15,7 @@ class MockRouter: Router {
     lazy var base = Bundle(url: Bundle(for: type(of: self)).url(forResource: "Mocks", withExtension: "bundle")!)!.bundleURL
     
     var searchEndpoint: URL {
-        base.appending(path: "mycommments")
+        base.appending(path: "commmentsrepos")
     }
 }
 
@@ -25,7 +25,7 @@ extension MyCommentsRepository {
         let router = MockRouter()
         let networkClient = MyNetworkClient()
         let api = MyApi(networkClient: networkClient, router: router)
-        let repo = MyCommentsRepository(commentsApi: api)
+        let repo = MyCommentsRepository(commentsApi: api, controller: PersistenceController.preview)
         return repo
     }
 }

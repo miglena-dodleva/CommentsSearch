@@ -9,6 +9,8 @@ import Foundation
 import CoreData
 
 protocol CommentsRepository {
+    
+    func searchCommentsFromApi(query: String) async throws -> [CommentsDto]
 
     func searchComments(query: String) async throws -> [Comments]
     
@@ -18,13 +20,17 @@ protocol CommentsRepository {
 }
 
 class MyCommentsRepository: CommentsRepository, ObservableObject {
-    
+   
     let commentsApi: Api
     let controller: PersistenceController
     
     init(commentsApi: Api, controller: PersistenceController) {
         self.commentsApi = commentsApi
         self.controller = controller
+    }
+    
+    func searchCommentsFromApi(query: String) async throws -> [CommentsDto] {
+        return try await commentsApi.searchResult(query: query)
     }
     
     func searchComments(query: String) async throws -> [Comments] {
