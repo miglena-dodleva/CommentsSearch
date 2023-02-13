@@ -34,7 +34,7 @@ class MyCommentsRepository: CommentsRepository, ObservableObject {
         
         for dto in dtos {
         
-            fetchRequest.predicate = NSPredicate(format: "id == %@", dto.id)
+            fetchRequest.predicate = NSPredicate(format: "id == %@", NSNumber(value: dto.id))
             let commentExitings = try controller.container.viewContext.fetch(fetchRequest).first ?? Comments(context: controller.container.viewContext)
             commentExitings.map(from: dto)
 

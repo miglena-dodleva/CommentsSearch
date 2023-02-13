@@ -28,8 +28,8 @@ struct SearchView: View {
             }
             else {
                 List{
-                    ForEach(0..<results.count) {index in
-                            CommentView(comment: self.results[index])
+                    ForEach(results) {item in
+                            CommentView(comment: item)
                            
                     }
                 }
@@ -54,12 +54,18 @@ struct SearchView: View {
             
             // get all from db
             Task {
-                let a = try? await commentsRepo.getAllCommentsFromDB()
-                results = a ?? []
+                let basetData = try? await commentsRepo.getAllCommentsFromDB()
+                results = basetData ?? []
                 
                 isLoading = false
             }
             
+        }
+        .refreshable {
+            let baseData = try? await commentsRepo.getAllCommentsFromDB()
+            results = baseData ?? []
+            
+            isLoading = false
         }
         .navigationTitle("Comments Search")
         .searchable(text: $query )
@@ -68,8 +74,14 @@ struct SearchView: View {
             isLoading = true
             Task{
               
-                let b = try? await commentsRepo.searchComments(query: query)
-                results = b ?? []
+                do {
+                    
+                    let comments = try await commentsRepo.searchComments(query: query)
+                    results = comments
+                }
+                catch {
+                    print("********** \(error)")
+                }
                 
                 isLoading = false
             }
