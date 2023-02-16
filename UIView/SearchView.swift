@@ -13,18 +13,48 @@ struct SearchView: View {
     @State private var results: [Comments] = []
     @State private var isLoading: Bool = false
     
-    @EnvironmentObject var commentsRepo: MyCommentsRepository
     
-    @ObservedObject var mainState: MainState = MainState()
+    @EnvironmentObject var commentsRepo: MyCommentsRepository
+    @EnvironmentObject var mainstate: MainState
+    
     
 //    @FetchRequest(entity: Comments.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Comments.id, ascending: true)]) var resultsDB: FetchedResults<Comments>
     
     var body: some View {
-        
+       
+        switch mainstate.mainState {
+         case .displayBaseDB:
+            // get all from db
+            
+                let baseData = try? await commentsRepo.getAllCommentsFromDB()
+                results = baseData ?? []
+
+                isLoading = false
+           
+         
+        case .displayResults:
+           
+                do {
+
+                    let commentswithquery = try await commentsRepo.searchComments(query: query)
+                    results = commentswithquery
+                }
+            catch {
+                print("********** \(error)")
+                
+                
+                isLoading = false
+            }
+        case .hasNoRsults:
+            if !isLoading {
+                Text("Has no results to show")
+            }
+            
+        }
+       
         NavigationStack{
 
-//
-//            switch mainState.mainState {
+            
 //            case .displayBaseDB:
 //                 isLoading = true
 //
@@ -87,46 +117,25 @@ struct SearchView: View {
             }
             
         }.onAppear {
-//            mainState.updateMainState(state: .displayBaseDB)
             isLoading = true
-
-            // get all from db
-            Task {
-                let basetData = try? await commentsRepo.getAllCommentsFromDB()
-                results = basetData ?? []
-
-                isLoading = false
-            }
+            
+            mainstate.updateMainState(state: .displayBaseDB)
             
         }
         .refreshable {
-//            mainState.updateMainState(state: .displayBaseDB)
-            let baseData = try? await commentsRepo.getAllCommentsFromDB()
-            results = baseData ?? []
-
-            isLoading = false
+            mainstate.updateMainState(state: .displayBaseDB)
         }
         .navigationTitle("Comments Search")
         .searchable(text: $query )
         .onSubmit(of: .search){
-//            mainState.updateMainState(state: .displayResults)
             isLoading = true
-            Task{
 
-                do {
+            mainstate.updateMainState(state: .displayResults)
 
-                    let commentswithquery = try await commentsRepo.searchComments(query: query)
-                    results = commentswithquery
-                }
-                catch {
-                    print("********** \(error)")
-                }
-
-                isLoading = false
             }
         }
     }
-}
+
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
