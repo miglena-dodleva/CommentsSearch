@@ -20,18 +20,3 @@ class AplicationState: ObservableObject {
         appState = state
     }
 }
-
-class MainState: ObservableObject {
-    
-    enum State {
-        case hasNoRsults
-        case displayResults
-        case displayBaseDB
-    }
-    
-    @Published private(set) var mainState: State = .displayBaseDB
-    
-    func updateMainState(state: State) {
-        mainState = state
-    }
-}

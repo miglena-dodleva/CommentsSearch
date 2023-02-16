@@ -17,6 +17,7 @@
 		4C59AB13299154E800CC650D /* CommentsSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AB12299154E800CC650D /* CommentsSearchUITests.swift */; };
 		4C59AB15299154E800CC650D /* CommentsSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C59AB14299154E800CC650D /* CommentsSearchUITestsLaunchTests.swift */; };
 		4C724155299E2BD300922D4B /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C724154299E2BD300922D4B /* CoreDataTests.swift */; };
+		4C724157299E575A00922D4B /* SearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C724156299E575A00922D4B /* SearchState.swift */; };
 		4C765187299248DA00568D3C /* CommentsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C765186299248DA00568D3C /* CommentsDto.swift */; };
 		4C76518D29924A6A00568D3C /* DB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C76518B29924A6A00568D3C /* DB.xcdatamodeld */; };
 		4C76519029924B7000568D3C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76518F29924B7000568D3C /* Router.swift */; };
@@ -68,6 +69,7 @@
 		4C59AB12299154E800CC650D /* CommentsSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSearchUITests.swift; sourceTree = "<group>"; };
 		4C59AB14299154E800CC650D /* CommentsSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C724154299E2BD300922D4B /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		4C724156299E575A00922D4B /* SearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchState.swift; sourceTree = "<group>"; };
 		4C765186299248DA00568D3C /* CommentsDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDto.swift; sourceTree = "<group>"; };
 		4C76518C29924A6A00568D3C /* Comments.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Comments.xcdatamodel; sourceTree = "<group>"; };
 		4C76518F29924B7000568D3C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -115,8 +117,9 @@
 		4C59AAE5299154E500CC650D = {
 			isa = PBXGroup;
 			children = (
-				4CD868352993BAD6008B1E54 /* Service */,
+				4C724156299E575A00922D4B /* SearchState.swift */,
 				4CD868332993AC8D008B1E54 /* AplicationState.swift */,
+				4CD868352993BAD6008B1E54 /* Service */,
 				4CA8F94829939049008601B3 /* UIView */,
 				4C765185299245CC00568D3C /* Models */,
 				4C765183299245A200568D3C /* Api */,
@@ -362,6 +365,7 @@
 				4C76519029924B7000568D3C /* Router.swift in Sources */,
 				4C76519629924BC800568D3C /* NetworkClient.swift in Sources */,
 				4C76518D29924A6A00568D3C /* DB.xcdatamodeld in Sources */,
+				4C724157299E575A00922D4B /* SearchState.swift in Sources */,
 				4C51768E29968047007979D7 /* DetailView.swift in Sources */,
 				4C765187299248DA00568D3C /* CommentsDto.swift in Sources */,
 				4CA8F94C29939086008601B3 /* SearchView.swift in Sources */,
