@@ -14,7 +14,7 @@ struct SearchView: View {
     
     @EnvironmentObject var commentsRepo: MyCommentsRepository
     
-    @EnvironmentObject var searchState: SearchState
+    @State var searchState: SearchState = SearchState()
 //    @FetchRequest(entity: Comments.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Comments.id, ascending: true)]) var resultsDB: FetchedResults<Comments>
     
     var body: some View {
@@ -27,10 +27,11 @@ struct SearchView: View {
                     ForEach(results) { item in
                         CommentView(comment: item)
                     }
-                } .environmentObject(searchState)
+                }
+                
             case .hasNoRsults:
                 Text("Has no results to show")
-                    .environmentObject(searchState)
+                
             case .loading:
                 ZStack{
                     Color(.white)
@@ -43,7 +44,7 @@ struct SearchView: View {
                         )
                         .frame(alignment: .center)
                         .shadow(radius: 10)
-                }.environmentObject(searchState)
+                }
             }
             
         }
@@ -55,7 +56,7 @@ struct SearchView: View {
                 let basetData = try? await commentsRepo.getAllCommentsFromDB()
                 results = basetData ?? []
 
-                searchState.updateSearchState(state: .displayDB)
+                searchState.updateSearchState(state: results.isEmpty ? .hasNoRsults : .displayDB)
             }
             
         }

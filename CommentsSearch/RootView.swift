@@ -14,8 +14,6 @@ struct RootView: View {
     @Environment(\.managedObjectContext) var viewContext
     
     @ObservedObject var applicationState: AplicationState = AplicationState()
-    @ObservedObject var searchState: SearchState = SearchState()
-
 
     var body: some View {
         
@@ -26,7 +24,6 @@ struct RootView: View {
                 
             case .main:
                 SearchView()
-                    .environmentObject(searchState)
             }
     }
 
