@@ -13,11 +13,11 @@ class SearchState: ObservableObject {
     
     enum State {
         case hasNoRsults
-        case displayResults
-        case displayBaseDB
+        case displayDB
+        case loading
     }
     
-    @Published private(set) var sState: State = .displayBaseDB
+    @Published private(set) var sState: State = .displayDB
     
     func updateSearchState(state: State) {
         sState = state
