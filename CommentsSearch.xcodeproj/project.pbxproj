@@ -117,8 +117,7 @@
 		4C59AAE5299154E500CC650D = {
 			isa = PBXGroup;
 			children = (
-				4C724156299E575A00922D4B /* SearchState.swift */,
-				4CD868332993AC8D008B1E54 /* AplicationState.swift */,
+				4CBCF64429A7C14F0006BF9B /* State */,
 				4CD868352993BAD6008B1E54 /* Service */,
 				4CA8F94829939049008601B3 /* UIView */,
 				4C765185299245CC00568D3C /* Models */,
@@ -213,6 +212,15 @@
 				4C51768D29968047007979D7 /* DetailView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		4CBCF64429A7C14F0006BF9B /* State */ = {
+			isa = PBXGroup;
+			children = (
+				4CD868332993AC8D008B1E54 /* AplicationState.swift */,
+				4C724156299E575A00922D4B /* SearchState.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 		4CD868352993BAD6008B1E54 /* Service */ = {
