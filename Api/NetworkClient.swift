@@ -56,7 +56,6 @@ extension URLRequest {
                 return "CONNECT"
 
             }
-
         }
     }
 }
@@ -67,7 +66,7 @@ extension URLRequest {
         self.setValue("application/json",
         forHTTPHeaderField: "Content-Type")
         self.httpMethod = method.rawValue }
-
+    
 }
 
 extension URLRequest {

@@ -16,7 +16,6 @@ struct CommentView: View {
             VStack(alignment: .leading, spacing: 3.0)
             {
                 HStack{
-                    
                     Text("Id= \(comment.id)")
                     
                     Spacer()
@@ -24,7 +23,6 @@ struct CommentView: View {
                     Text("PostId= \(comment.post_id)")
                         .padding(.horizontal, 30)
                         .font(.headline)
-                    
                 }
                 VStack(alignment: .leading){
                     Text("Name: \(comment.name)")
@@ -32,10 +30,7 @@ struct CommentView: View {
                 VStack(alignment: .leading){
                     Text("Email: \(comment.email)")
                 }
-                
-                
             }.padding(.horizontal, 30)
-            
         }
     }
 }

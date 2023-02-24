@@ -14,6 +14,4 @@ class MyRouter: Router {
     var searchEndpoint: URL {
         return URL(string: base + "comments")!
     }
-    
-    
 }

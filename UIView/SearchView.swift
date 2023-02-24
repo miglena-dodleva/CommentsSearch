@@ -11,11 +11,9 @@ struct SearchView: View {
     
     @State private var query = ""
     @State private var results: [Comments] = []
+    @State var searchState: SearchState = SearchState()
     
     @EnvironmentObject var commentsRepo: MyCommentsRepository
-    
-    @State var searchState: SearchState = SearchState()
-//    @FetchRequest(entity: Comments.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Comments.id, ascending: true)]) var resultsDB: FetchedResults<Comments>
     
     var body: some View {
         
@@ -46,7 +44,6 @@ struct SearchView: View {
                         .shadow(radius: 10)
                 }
             }
-            
         }
         .onAppear {
             searchState.updateSearchState(state: .loading)
@@ -58,7 +55,6 @@ struct SearchView: View {
 
                 searchState.updateSearchState(state: results.isEmpty ? .hasNoRsults : .displayDB)
             }
-            
         }
         .refreshable {
             let baseData = try? await commentsRepo.getAllCommentsFromDB()
@@ -89,8 +85,6 @@ struct SearchView: View {
                 else{
                     searchState.updateSearchState(state: .hasNoRsults)
                 }
-
-                
             }
         }
     }

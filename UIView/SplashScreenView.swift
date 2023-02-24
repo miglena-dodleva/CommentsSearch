@@ -8,7 +8,6 @@
 import SwiftUI
 import CoreData
 
-
 struct SplashScreenView: View {
     
     @EnvironmentObject var commentsRepo: MyCommentsRepository
@@ -32,7 +31,6 @@ struct SplashScreenView: View {
                 .clipShape(Circle())
                 .overlay {
                     Circle().stroke(.black, lineWidth: 4)
-                    
                 }
                 .rotationEffect(Angle.degrees(isRotated ? 360 : 0))
                 .animation(animation)

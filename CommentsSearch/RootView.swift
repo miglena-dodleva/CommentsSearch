@@ -26,8 +26,6 @@ struct RootView: View {
                 SearchView()
             }
     }
-
-    
 }
 
 struct RootView_Previews: PreviewProvider {
