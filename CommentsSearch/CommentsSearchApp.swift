@@ -21,3 +21,19 @@ struct CommentsSearchApp: App {
         }
     }
 }
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        if ProcessInfo.processInfo.arguments.contains("UNIT_TESTING") {
+            
+            self.window?.rootViewController = UIViewController()
+            return false
+        }
+        
+        return true
+    }
+}

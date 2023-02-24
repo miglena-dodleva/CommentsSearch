@@ -4,11 +4,8 @@
 //
 //  Created by Jessica on 9.02.23.
 //
-
+import SwiftUI
 import Foundation
-@testable import CommentsSearch
-
-
 @testable import CommentsSearch
 
 class MockRouter: Router {
@@ -16,7 +13,9 @@ class MockRouter: Router {
     lazy var base = Bundle(url: Bundle(for: type(of: self)).url(forResource: "Mocks", withExtension: "bundle")!)!.bundleURL
     
     var searchEndpoint: URL {
-        base.appending(path: "commentsrepos")
+        
+            base.appending(path: "commentsrepos")
+            
     }
 }
 
@@ -29,4 +28,5 @@ extension MyCommentsRepository {
         let repo = MyCommentsRepository(commentsApi: api, controller: PersistenceController.preview)
         return repo
     }
+    
 }

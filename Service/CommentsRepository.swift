@@ -10,7 +10,7 @@ import CoreData
 
 protocol CommentsRepository {
     
-    func searchCommentsFromApi(query: String) async throws -> [CommentsDto]
+//    func searchCommentsFromApi(query: String) async throws -> [CommentsDto]
 
     func searchComments(query: String) async throws -> [Comments]
     
@@ -29,9 +29,9 @@ class MyCommentsRepository: CommentsRepository, ObservableObject {
         self.controller = controller
     }
     
-    func searchCommentsFromApi(query: String) async throws -> [CommentsDto] {
-        return try await commentsApi.searchResult(query: query)
-    }
+//    func searchCommentsFromApi(query: String) async throws -> [CommentsDto] {
+//        return try await commentsApi.searchResult(query: query)
+//    }
     
     func searchComments(query: String) async throws -> [Comments] {
         
