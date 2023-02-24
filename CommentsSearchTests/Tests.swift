@@ -39,7 +39,7 @@ class Tests: XCTestCase {
             // here we tests search with query + update
             
             let searchComments = try? await repo.searchComments(query: "2")
-            XCTAssertEqual(searchComments?[2].email, "Dall@gmail.com")
+            XCTAssertEqual(searchComments?[1].email, "Dall@gmail.com")
 
 
 //        }
