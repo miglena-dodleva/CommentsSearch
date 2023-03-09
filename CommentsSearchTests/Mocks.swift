@@ -10,12 +10,12 @@ import Foundation
 
 class MockRouter: Router {
     
+    @State var baseEndPoint = false
+    
     lazy var base = Bundle(url: Bundle(for: type(of: self)).url(forResource: "Mocks", withExtension: "bundle")!)!.bundleURL
     
     var searchEndpoint: URL {
-        
-            base.appending(path: "commentsrepos")
-            
+        base.appending(path: "commentsrepos")
     }
 }
 

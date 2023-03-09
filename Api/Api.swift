@@ -26,9 +26,17 @@ class MyApi: Api {
     
     func searchResult(query: String) async throws -> [CommentsDto] {
         
-        let requestUrl = URL(string: "\(router.searchEndpoint)?postId=\(query)")!
+        var urlComponents = URLComponents(url: router.searchEndpoint, resolvingAgainstBaseURL: false)
+        urlComponents?.queryItems = [
+            .init(name: "postId", value: query)
+        ]
         
-        let request = URLRequest(url: requestUrl, method: .get)
+        guard let url = urlComponents?.url else {
+            return []
+        }
+//        let requestUrl = URL(string: "\(router.searchEndpoint)?postId=\(query)")!
+        
+        let request = URLRequest(url: url, method: .get)
         
         return try await networkClient.perform(request)
         
